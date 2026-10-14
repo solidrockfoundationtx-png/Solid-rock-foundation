@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Solid Rock Foundation | Foundation Repair & Construction | DFW</title>
-<meta name="description" content="Solid Rock Foundation provides foundation repair, concrete, roofing, fencing and new construction services throughout the Dallas-Fort Worth area. Request a free estimate.">
+<meta name="description" content="Solid Rock Foundation provides foundation repair, plumbing repairs and new plumbing installations, concrete, roofing, fencing and new construction services for homeowners and business owners throughout Dallas, TX, and the surrounding Dallas-Fort Worth areas. Request a free estimate.">
 <style>
 :root{--red:#c81717;--dark:#0b0b0c;--light:#f5f5f5;--gray:#666;--card:#fff}
 *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#171717;background:#fff;line-height:1.6}
@@ -38,7 +38,7 @@ footer{background:#050505;color:#bbb;padding:35px 5%;text-align:center;font-size
   <div class="hero-inner">
     <div class="eyebrow">DFW Foundation & Construction</div>
     <h1>Built on solid ground.</h1>
-    <p>Professional foundation repair and construction services for homeowners across the Dallas-Fort Worth area. Quality work. Straight answers. Solid results.</p>
+    <p>Professional foundation repair and construction services for homeowners and business owners throughout Dallas, TX, and the surrounding Dallas-Fort Worth areas. Quality work. Straight answers. Solid results.</p>
     <a class="btn" href="#contact">REQUEST A FREE ESTIMATE</a>
     <a class="btn alt" href="#services">VIEW SERVICES</a>
   </div>
@@ -46,14 +46,15 @@ footer{background:#050505;color:#bbb;padding:35px 5%;text-align:center;font-size
 
 <section id="services">
 <div class="wrap">
-<div class="section-head"><div class="eyebrow">What We Do</div><h2>One company. Multiple solutions.</h2><p>From foundation problems to exterior improvements, Solid Rock Foundation helps homeowners protect, repair and improve their properties.</p></div>
+<div class="section-head"><div class="eyebrow">What We Do</div><h2>One company. Multiple solutions.</h2><p>From foundation and plumbing problems to exterior improvements, Solid Rock Foundation helps homeowners and businesses protect, repair and improve their properties.</p></div>
 <div class="cards">
 <div class="card"><div class="icon">01</div><h3>Foundation Repair</h3><p>Solutions for settling, shifting and other foundation concerns, with a focus on durable repairs and honest communication.</p></div>
 <div class="card"><div class="icon">02</div><h3>Concrete</h3><p>Concrete repair and new concrete installation for residential projects, including practical improvements around your home.</p></div>
 <div class="card"><div class="icon">03</div><h3>Roofing</h3><p>Roofing work for homeowners who need repairs, replacement work or help addressing exterior problems.</p></div>
 <div class="card"><div class="icon">04</div><h3>Fencing</h3><p>Fence installation and repair to improve privacy, security and the appearance of your property.</p></div>
 <div class="card"><div class="icon">05</div><h3>New Construction</h3><p>Residential construction services with attention to solid workmanship and a dependable finished product.</p></div>
-<div class="card"><div class="icon">06</div><h3>Home Improvements</h3><p>Additional repair and construction help for homeowners who want a reliable local crew for their project.</p></div>
+<div class="card"><div class="icon">06</div><h3>Plumbing Repairs & Installation</h3><p>New plumbing installations and repairs for existing plumbing damage, clogged or blocked lines, and other plumbing issues. We work with PVC and cast iron pipe, including damaged cast iron line replacement.</p></div>
+<div class="card"><div class="icon">07</div><h3>Home Improvements</h3><p>Additional repair and construction help for homeowners and business owners who want a reliable local crew for their project.</p></div>
 </div>
 </div>
 </section>
@@ -84,18 +85,41 @@ footer{background:#050505;color:#bbb;padding:35px 5%;text-align:center;font-size
 <div class="wrap">
 <div class="section-head"><div class="eyebrow">Get Started</div><h2>Request your free estimate.</h2><p>Fill this out and we'll have the details needed to follow up about your project.</p></div>
 <div class="contact">
-<div class="contactbox"><h3>Solid Rock Foundation</h3><p><strong>Foundation • Concrete • Roofing • Fencing • New Construction</strong></p><p>Serving homeowners throughout the Dallas-Fort Worth area.</p><p><strong>Call or text:</strong><br><a href="tel:YOUR_PHONE">YOUR PHONE NUMBER</a></p><p><strong>Email:</strong><br><a href="mailto:YOUR_EMAIL">YOUR EMAIL</a></p></div>
-<form action="mailto:YOUR_EMAIL" method="post" enctype="text/plain">
+<div class="contactbox"><h3>Solid Rock Foundation</h3><p><strong>Foundation • Plumbing • Concrete • Roofing • Fencing • New Construction</strong></p><p>Serving homeowners and business owners throughout Dallas, TX, and the surrounding Dallas-Fort Worth areas.</p><p><strong>Call or text:</strong><br><a href="tel:+14694318504">(469) 431-8504</a></p><p><strong>Email:</strong><br><a href="mailto:solidrockfoundationtx@gmail.com">solidrockfoundationtx@gmail.com</a></p></div>
+<form id="estimate-form">
 <input name="name" placeholder="Your name" required>
 <input name="phone" placeholder="Phone number" required>
 <input name="city" placeholder="City">
 <textarea name="project" placeholder="Tell us about your project" required></textarea>
 <button class="btn" type="submit">REQUEST FREE ESTIMATE</button>
 </form>
+<script>
+(function () {
+  const form = document.getElementById('estimate-form');
+  if (!form) return;
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    if (!form.reportValidity()) return;
+    const data = new FormData(form);
+    const subject = 'Free Estimate Request - Solid Rock Foundation';
+    const body = [
+      'New estimate request for Solid Rock Foundation',
+      '',
+      'Name: ' + (data.get('name') || ''),
+      'Phone: ' + (data.get('phone') || ''),
+      'City: ' + (data.get('city') || ''),
+      '',
+      'Project details:',
+      (data.get('project') || '')
+    ].join('\n');
+    window.location.href = 'mailto:solidrockfoundationtx@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  });
+})();
+</script>
 </div>
 </div>
 </section>
 
-<footer><strong>SOLID ROCK FOUNDATION</strong><br>Foundation Repair • Concrete • Roofing • Fencing • New Construction<br><br>Serving the Dallas-Fort Worth area • © 2026 Solid Rock Foundation</footer>
+<footer><strong>SOLID ROCK FOUNDATION</strong><br>Foundation Repair • Plumbing • Concrete • Roofing • Fencing • New Construction<br><br>Serving Dallas, TX, and the surrounding Dallas-Fort Worth areas • © 2026 Solid Rock Foundation</footer>
 </body>
 </html>
